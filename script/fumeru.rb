@@ -32,7 +32,7 @@ def fumeru? input
   _, vowels = tokenize input
   vowel = vowels.join('')
   hits = Groonga["words"].select {|record| record.vowel =~ vowel}
-  fumeru = hits.collect{|record| record.key['text'] }
+  fumeru = hits.collect{|record| record.key['text'] } - [input]
   if fumeru.size > 0
     puts "\"#{input}\"と\"#{fumeru.sample}\"で踏める。"
   else

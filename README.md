@@ -15,3 +15,7 @@ search
 
     % ./script/fumeru.rb 寿司
 
+### See Also
+
+@ingafumeru
+
